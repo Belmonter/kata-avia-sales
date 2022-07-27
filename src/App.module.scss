@@ -1,0 +1,21 @@
+@use 'sass:math';
+@import './scss/base/mixins.scss';
+
+.app {
+	padding: 50px 103px;
+	background: #f3f7fa;
+
+	&__wrapper {
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+}
+
+.logo {
+	display: block;
+	margin: 0px auto 0px auto;
+}
