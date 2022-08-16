@@ -6,7 +6,7 @@ import * as allActions from '../../redux/actions';
 import s from './Filters.module.scss';
 
 function Filters() {
-	const state = useSelector((state) => state);
+	const state = useSelector((state) => state.check);
 	const dispatch = useDispatch();
 
 	const { checkAll, noTransfer, oneTransfer, twoTransfers, threeTransfers } = bindActionCreators(allActions, dispatch);

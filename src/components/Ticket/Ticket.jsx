@@ -1,12 +1,13 @@
 import logo from '../../assets/img/S7 Logo.svg';
+import getTime from '../../assets/js/getTime';
 
 import s from './Ticket.module.scss';
 
-function Ticket() {
+function Ticket({ price, carrier, frOrigin, frDestination, frDate, frDuration, frStops, toOrigin, toDestination, toDate, toDuration, toStops }) {
 	return (
 		<div className={s.ticket}>
 			<div className={s.header}>
-				<div className={s.price}>13 400 Р</div>
+				<div className={s.price}>{price} Р</div>
 				<div className={s.logo}>
 					<img src={logo} alt="icon logo" />
 				</div>
@@ -14,11 +15,15 @@ function Ticket() {
 			<div className={s.main}>
 				<div className={s.item}>
 					<div className={s.item__header}>
-						<div className={s.title}>MOW – HKT</div>
-						<div className={s.descr}>10:45 – 08:00</div>
+						<div className={s.title}>
+							{frOrigin} – {frDestination}
+						</div>
+						<div className={s.descr}>{getTime(frDuration)}</div>
 					</div>
 					<div className={s.footer}>
-						<div className={s.title}>MOW – HKT</div>
+						<div className={s.title}>
+							{toOrigin} – {toDestination}
+						</div>
 						<div className={s.descr}>11:20 – 00:50</div>
 					</div>
 				</div>

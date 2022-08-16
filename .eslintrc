@@ -34,11 +34,11 @@
   ],
   "rules": {
     "no-console": "warn",
-    "prefer-const": "error",
+    "prefer-const": "warn",
     "max-len": [
       "warn",
       {
-        "code": 120
+        "code": 150
       }
     ],
     "comma-dangle": [

@@ -20,5 +20,5 @@
     "jsx",
     "typescript"
   ],
-  "printWidth": 120
+  "printWidth": 150
 }

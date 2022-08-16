@@ -1,9 +1,18 @@
-@use "sass:math";
-@import "../../scss/base/mixins.scss";
+@use 'sass:math';
+@import '../../scss/base/mixins.scss';
 
 .btn {
-  width: 100%;
-  height: 50px;
-  background: #2196f3;
-  border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	width: 100%;
+	height: 50px;
+	background: #2196f3;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	line-height: math.div(12, 20);
+	letter-spacing: 0.5px;
+	color: #ffffff;
 }
