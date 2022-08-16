@@ -1,5 +1,5 @@
 function getTime(min) {
-	let hours = Math.trunc(mins / 60);
+	let hours = Math.trunc(min / 60);
 	let minutes = min % 60;
 	return `${hours}ч ${min}м`;
 }

@@ -18,7 +18,7 @@ function App() {
 	const { getData } = bindActionCreators(allActions, dispatch);
 
 	useEffect(() => {
-		api.getTickets().then(({ tickets }) => getData(tickets));
+		api.getTickets().then((data) => getData(data));
 	}, []);
 
 	return (
