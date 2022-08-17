@@ -16,3 +16,30 @@
 	letter-spacing: 0.5px;
 	color: #ffffff;
 }
+
+.tabs {
+	.ant-tabs-tab {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 168px;
+		height: 50px;
+		border: 1px solid #dfe5ec;
+		font-weight: 600;
+		line-height: math.div(20, 12);
+		letter-spacing: 0.5px;
+
+		&.ant-tabs-tab-active {
+			background-color: #2196f3;
+			border: unset;
+
+			.ant-tabs-tab-btn {
+				color: #fff;
+			}
+		}
+	}
+
+	.ant-tabs-tab + .ant-tabs-tab {
+		margin: 0px 0px 0px 0px;
+	}
+}
