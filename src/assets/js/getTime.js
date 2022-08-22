@@ -1,5 +1,5 @@
 export function getTime(min, between) {
-	let hours = Math.trunc(min / 60);
+	const hours = Math.trunc(min / 60);
 	let minutes = min % 60;
 	if (minutes < 10) minutes = `0${minutes}`;
 	if (between) {
@@ -13,7 +13,6 @@ export function getTime(min, between) {
 
 export function getTimeBetween(apiDate, min) {
 	const timeStart = new Date(apiDate);
-	const timeEnd = min * 60000;
 	let startHours = timeStart.getHours();
 	let startMinutes = timeStart.getMinutes();
 	const { hours: hoursDiff, minutes: minutesDiff } = getTime(min, true);

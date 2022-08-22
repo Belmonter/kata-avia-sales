@@ -6,7 +6,7 @@
 	background: #f3f7fa;
 
 	&__wrapper {
-		margin-top: 50px;
+		margin-top: 15px;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
@@ -18,4 +18,9 @@
 .logo {
 	display: block;
 	margin: 0px auto 0px auto;
+}
+
+.progress__wrapper {
+	display: flex;
+	justify-content: center;
 }

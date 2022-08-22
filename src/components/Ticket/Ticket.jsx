@@ -40,11 +40,11 @@ function Ticket({ price, carrier, frOrigin, frDestination, frDate, frDuration, f
 				<div className={s.item}>
 					<div className={s.item__header}>
 						<div className={s.title}>{`${frStops.length} пересадка(ок, ки)`}</div>
-						<div className={s.descr}>{frStops.join(', ')}</div>
+						<div className={s.descr}>{frStops.length ? frStops.join(', ') : 'Без пересадок'}</div>
 					</div>
 					<div className={s.footer}>
 						<div className={s.title}>{`${toStops.length} пересадка(ок, ки)`}</div>
-						<div className={s.descr}>{toStops.join(', ')}</div>
+						<div className={s.descr}>{toStops.length ? toStops.join(', ') : 'Без пересадок'}</div>
 					</div>
 				</div>
 			</div>

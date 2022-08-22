@@ -1,20 +1,28 @@
-@use "sass:math";
-@import "../../scss/base/mixins.scss";
+@use 'sass:math';
+@import '../../scss/base/mixins.scss';
 
 .filters {
-  padding-bottom: 20px;
-  height: fit-content;
-  background: #ffffff;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+	padding-bottom: 20px;
+	height: fit-content;
+	background: #ffffff;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	@media (max-width: 971px) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
+
 .title {
-  margin-top: 20px;
-  padding: 0 20px;
-  font-weight: 600;
-  line-height: math.div(12, 12);
-  letter-spacing: 0.5px;
+	margin-top: 20px;
+	padding: 0 20px;
+	font-weight: 600;
+	line-height: math.div(12, 12);
+	letter-spacing: 0.5px;
 }
+
 .wrapper {
-  margin-top: 20px;
+	margin-top: 20px;
 }

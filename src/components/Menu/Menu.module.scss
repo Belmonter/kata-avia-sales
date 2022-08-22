@@ -1,6 +1,12 @@
 @use 'sass:math';
 @import '../../scss/base/mixins.scss';
 
+.menu {
+	@media (max-width: 971px) {
+		width: 100%;
+	}
+}
+
 .btn {
 	cursor: pointer;
 	margin-top: 20px;

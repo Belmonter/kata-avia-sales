@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { filterTickets } from '../../assets/js/Filters';
 import * as allActions from '../../redux/actions';
 
 import s from './Filters.module.scss';
 
 function Filters() {
 	const state = useSelector((state) => state.check);
+	const data = useSelector((state) => state.data);
 	const dispatch = useDispatch();
-
 	const { checkAll, noTransfer, oneTransfer, twoTransfers, threeTransfers } = bindActionCreators(allActions, dispatch);
 
 	return (
@@ -24,7 +25,10 @@ function Filters() {
 						value="1"
 						name="form[]"
 						checked={state.checkAll}
-						onChange={checkAll}
+						onChange={(e) => {
+							checkAll(e);
+							filterTickets(data);
+						}}
 					/>
 					<label htmlFor="c_1" className="checkbox__label">
 						<span className="checkbox__text">Все</span>
@@ -39,7 +43,10 @@ function Filters() {
 						value="1"
 						name="form[]"
 						checked={state.withoutTransfer}
-						onChange={noTransfer}
+						onChange={(e) => {
+							noTransfer(e);
+							filterTickets(data);
+						}}
 					/>
 					<label htmlFor="c_2" className="checkbox__label">
 						<span className="checkbox__text">Без пересадок</span>
@@ -54,7 +61,10 @@ function Filters() {
 						value="1"
 						name="form[]"
 						checked={state.oneTransfer}
-						onChange={oneTransfer}
+						onChange={(e) => {
+							oneTransfer(e);
+							filterTickets(data);
+						}}
 					/>
 					<label htmlFor="c_3" className="checkbox__label">
 						<span className="checkbox__text">1 пересадка</span>
@@ -69,7 +79,10 @@ function Filters() {
 						value="1"
 						name="form[]"
 						checked={state.twoTransfers}
-						onChange={twoTransfers}
+						onChange={(e) => {
+							twoTransfers(e);
+							filterTickets(data);
+						}}
 					/>
 					<label htmlFor="c_4" className="checkbox__label">
 						<span className="checkbox__text">2 пересадки</span>
@@ -84,7 +97,10 @@ function Filters() {
 						value="1"
 						name="form[]"
 						checked={state.threeTransfers}
-						onChange={threeTransfers}
+						onChange={(e) => {
+							threeTransfers(e);
+							filterTickets(data);
+						}}
 					/>
 					<label htmlFor="c_5" className="checkbox__label">
 						<span className="checkbox__text">3 пересадки</span>

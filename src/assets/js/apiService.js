@@ -1,19 +1,22 @@
 class AviaService {
 	_url = 'https://aviasales-test-api.kata.academy/';
-	_searchId = '';
 
-	async getData(options = null) {
-		const result = await fetch(`${this._url}${options}`);
-		return await result.json();
+	async getData(search, options = null) {
+		try {
+			const result = await fetch(`${this._url}${options}`);
+			return await result.json();
+		} catch (e) {
+			await this.getData(false, options);
+		}
 	}
 
-	async getTickets() {
-		const searchId = await this.getSearchId();
-		return this.getData(`tickets?searchId=${searchId}`);
+	async getTickets(searchId = true) {
+		if (searchId) this.searchId = await this.getSearchId();
+		return this.getData(false, `tickets?searchId=${this.searchId}`);
 	}
 
 	async getSearchId() {
-		const { searchId } = await this.getData('search');
+		const { searchId } = await this.getData(true, 'search');
 		return searchId;
 	}
 }
