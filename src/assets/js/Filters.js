@@ -8,7 +8,7 @@ export function filterTickets() {
 		return data;
 	}
 	if (withoutTransfer && !oneTransfer && !twoTransfers && !threeTransfers) {
-		resultData = data.filter((el) => el.segments[0].stops.length === 0 && el.segments[1].stops.length === 0);
+		resultData = data.filter((el) => el.segments[0].stops.length === 0);
 		return resultData;
 	}
 	if (withoutTransfer && oneTransfer && !twoTransfers && !threeTransfers) {
