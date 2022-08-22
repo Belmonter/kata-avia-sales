@@ -8,6 +8,7 @@ import '../Tabs/TicketTabs.scss';
 
 import s from './Menu.module.scss';
 
+
 const { TabPane } = Tabs;
 
 export function Menu() {
@@ -22,7 +23,7 @@ export function Menu() {
 		return (
 			<div className={s.menu}>
 				<div className="tabs">
-					<Tabs defaultActiveKey="1">
+					<Tabs defaultActiveKey="1" centered>
 						<TabPane tab="Самый дешевый" key="1">
 							<div className={s.menu__wrapper}>{formatTickets(filterTickets(), cheapCounter, true)}</div>
 							<div className={s.btn} onClick={() => setCheapCounter(cheapCounter + 5)}>

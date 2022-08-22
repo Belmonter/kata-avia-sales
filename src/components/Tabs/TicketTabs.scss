@@ -6,13 +6,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 359px;
-		@include adaptiveValue('width', 359, 198, 971, 650, 1);
+		width: 260px;
 		height: 50px;
 		border: 1px solid #dfe5ec;
 		font-weight: 600;
 		line-height: math.div(20, 12);
 		letter-spacing: 0.5px;
+		@media (max-width: 981px) {
+			width: 300px;
+		}
+		@media (max-width: 648px) {
+			width: 200px;
+		}
+		@media (max-width: 660px) {
+		}
 
 		&.ant-tabs-tab-active {
 			background-color: #2196f3;

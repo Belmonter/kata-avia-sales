@@ -4,6 +4,9 @@
 .app {
 	padding: 50px 103px;
 	background: #f3f7fa;
+	@media (max-width: 981px) {
+		padding: 50px 0px;
+	}
 
 	&__wrapper {
 		margin-top: 15px;
